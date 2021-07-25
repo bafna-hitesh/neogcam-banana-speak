@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #FDE68A;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+
+header {
+    background-color: #10455b;
+    padding: 1rem;
+    color: white;
+}
+
+main {
+    margin: auto;
+    padding: 1rem;
+    background-image: url(minion.jpg);
+    background-position: center-top;
+    background-repeat: no-repeat;
+    background-size:100%;
+}
+
+h1,
+.btn {
+    text-align: center;
+}
+
+.input {
+    margin: auto;
+    width: 50%;
+}
+
+#btn-tlate,
+#input-txt {
+    font-family: 'Poppins', sans-serif;
+}
+
+#btn-tlate {
+    background-color: #10455b;
+    color: white;
+    cursor: pointer;
+    border-radius: 50px;
+    font-weight: 500;
+    padding: 1rem 1.5rem;
+    margin: 1rem 0 1rem 0;
+}
+
+#btn-tlate:hover {
+    opacity: 0.9;
+}
+
+#input-txt {
+    width: 100%;
+    border-bottom-left-radius: 10%;
+    border-top-right-radius: 10%;
+    border-top-left-radius: 2%;
+    border-bottom-right-radius: 2%;
+}
+
+.tlated-txt h3 {
+    color: black;
+    margin-bottom: 1rem;
+}
+
+#output-txt {
+    width: 100%;
+    background-color: whitesmoke;
+    color: #10455b;
+    min-height: 15vh;
+    border-bottom-left-radius: 10%;
+    border-top-right-radius: 10%;
+    border-top-left-radius: 2%;
+    border-bottom-right-radius: 2%;
+}
+
+footer{
+    margin: 0;
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    background-color: #10455b;
+    color: white;
+    font-size: x-large;
+}

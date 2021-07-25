@@ -1,37 +1,24 @@
-var btnTranslate = document.querySelector("#btn-translate");
-var txtInput = document.querySelector("#txt-input");
-var outputDiv =document.querySelector("#output");
+var inputTranslateText = document.querySelector("#input-txt");
+var outputTranslateText = document.querySelector("#output-txt");
 
-var serverURL= "http://127.0.0.1:5500/index.html"
+var btnTranslator = document.querySelector("#btn-tlate");
+btnTranslator.addEventListener("click", btnClick);
 
-   function getTranslationURL(text){
-       return serverURL + "?" + "text" + text
-   }
+var server = "https://api.funtranslations.com/translate/minion.json";
 
-function clickEventHandler(){ 
-    
-    // outputDiv.innerText = 'nvjdjvbs' + txtInput.value;
-    var inputText = txtInput.Value;
+function btnClick(e) {
+    var input = inputTranslateText.value;
+    var finalURL = constructURL(input);
 
-    fetch(getTranslationURL(inputText))
+    fetch(finalURL)
         .then(response => response.json())
-        .then(json => console.log(json))
-    
-};
-  
-btnTranslate.addEventListener("click", clickEventHandler)
+        .then(json => {
+            outputTranslateText.innerText = json.contents.translated;
+        })
+        .catch(() => alert("Server Error Please Try After Sometime"))
+}
 
-
-
-
-
-
-  
-
-
-
-// querySelector() ---for reference---
-// addEventLisner() ---for event---
-// click , input
-// .value  for reading
-// .innerText for put something
+function constructURL(inputText) {
+    var encodedURI = encodeURI(inputText);
+    return `${server}? text=${encodedURI}`;
+}
