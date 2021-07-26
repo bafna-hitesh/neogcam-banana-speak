@@ -22,7 +22,7 @@ main {
     margin: auto;
     padding: 1rem;
     background-image: url(minion.jpg);
-    background-position: center-top;
+    background-position: top-center;
     background-repeat: no-repeat;
     background-size:100%;
 }
@@ -65,7 +65,7 @@ h1,
 }
 
 .tlated-txt h3 {
-    color: black;
+    color:teal;
     margin-bottom: 1rem;
 }
 
@@ -88,4 +88,5 @@ footer{
     background-color: #10455b;
     color: white;
     font-size: x-large;
+    margin: top;
 }
